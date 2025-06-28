@@ -3,7 +3,7 @@ About lnav-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lnav-feedstock/blob/main/LICENSE.txt)
 
-Home: https://lnav.org
+Home: https://lnav.org/
 
 Package license: BSD-2-Clause
 
@@ -11,7 +11,7 @@ Summary: A log file viewer for the terminal
 
 Development: https://github.com/tstack/lnav
 
-Documentation: https://docs.lnav.org
+Documentation: https://docs.lnav.org/
 
 The Logfile Navigator is a log file viewer for the terminal. Given a set of files/directories, lnav will:
 
@@ -31,7 +31,6 @@ Then, in the lnav TUI, you can:
   - pretty-print structured text (press P);
   - view a histogram of messages over time (press i);
   - analyze messages using SQLite (press ;)
-
 
 Current build status
 ====================
