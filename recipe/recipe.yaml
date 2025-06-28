@@ -1,24 +1,27 @@
-{% set name = "lnav" %}
-{% set version = "0.12.4" %}
-
-package:
-  name: {{ name|lower }}
-  version: {{ version }}
-
-source:
-  url: https://github.com/tstack/{{ name|lower }}/releases/download/v{{ version }}/{{ name|lower }}-{{ version }}.tar.gz
+context:
+  name: lnav
+  version: "0.12.4"
   sha256: e1e70c9e5a2fce21da80eec9b9c3adb09fd05e03986285098a9f2567c1eb4792
 
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/tstack/${{ name }}/releases/download/v${{ version }}/${{ name }}-${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+
 build:
-  number: 1
-  skip: true  # [win]
+  number: 0
+  skip:
+    - win
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - {{ compiler('rust') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler("c") }}
+    - ${{ compiler("cxx") }}
+    - ${{ compiler("rust") }}
+    - ${{ stdlib("c") }}
     - cargo-bundle-licenses
     - make
     - pkg-config
@@ -35,17 +38,16 @@ requirements:
     - sqlite
     - zlib
 
-test:
-  commands:
+tests:
+  - script:
     - lnav -V
     - printf 'lnav' | lnav -n -c ';from [{ col1=1 }] | take 1' | grep -q col1
 
 about:
-  home: https://lnav.org
-  dev_url: https://github.com/tstack/lnav
-  doc_url: https://docs.lnav.org
+  homepage: https://lnav.org
+  repository: https://github.com/tstack/lnav
+  documentation: https://docs.lnav.org
   license: BSD-2-Clause
-  license_family: BSD
   license_file:
     - LICENSE
     - THIRDPARTY.yml
