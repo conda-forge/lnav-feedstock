@@ -1,7 +1,7 @@
 context:
   name: lnav
-  version: "0.12.4"
-  sha256: e1e70c9e5a2fce21da80eec9b9c3adb09fd05e03986285098a9f2567c1eb4792
+  version: "0.13.0"
+  sha256: 1d24b9bdb59e3de995de95f6f029ace664e56a80fb0db945077687e86de586b7
 
 package:
   name: ${{ name }}
@@ -40,8 +40,8 @@ requirements:
 
 tests:
   - script:
-    - lnav -V
-    - printf 'lnav' | lnav -n -c ';from [{ col1=1 }] | take 1' | grep -q col1
+      - lnav -V
+      - printf 'lnav' | lnav -n -c ';from [{ col1=1 }] | take 1' | grep -q col1
 
 about:
   homepage: https://lnav.org
