@@ -26,6 +26,8 @@ requirements:
     - make
     - pkg-config
     - sed
+    - if: build_platform != target_platform
+      then: zlib
   host:
     - bzip2
     - jemalloc
