@@ -1,7 +1,7 @@
 context:
   name: lnav
-  version: "0.13.2"
-  sha256: 2b40158e36aafce780075e05419924faf8dd99d1c0d4ae25a15b00bc944f4d60
+  version: "0.14.0"
+  sha256: 0fd591a2e0488a06b3b44d7b384d3d7c6852d68607efc16ef4dec7a6ed054eea
 
 package:
   name: ${{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip:
     - win
 
