@@ -6,7 +6,7 @@ export CFLAGS="${CFLAGS:-} -D_DEFAULT_SOURCE -D_BSD_SOURCE"
 export CXXFLAGS="${CXXFLAGS:-} -fpermissive -std=c++17 -D_DEFAULT_SOURCE -D_BSD_SOURCE"
 
 # Build prqlc-c library in advance
-cd src/third-party/liblnav-rs-ext
+cd src/third-party/lnav-rs-ext
 cargo-bundle-licenses --format yaml --output ${SRC_DIR}/THIRDPARTY.yml
 cargo build --release
 cd ${SRC_DIR}
