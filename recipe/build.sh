@@ -10,7 +10,7 @@ cd src/third-party/lnav-rs-ext
 cargo-bundle-licenses --format yaml --output ${SRC_DIR}/THIRDPARTY.yml
 cargo build --release
 cd ${SRC_DIR}
-PRQLC_DIR=${SRC_DIR}/src/third-party/liblnav-rs-ext/target
+PRQLC_DIR=${SRC_DIR}/src/third-party/lnav-rs-ext/target
 mkdir -p ${PRQLC_DIR}/release
 find "${PRQLC_DIR}" -type f \( -name 'liblnav_rs_ext.a' -o -name 'liblnav_rs_ext.d' \) \
     -exec cp {} "${PRQLC_DIR}/release/" \;
