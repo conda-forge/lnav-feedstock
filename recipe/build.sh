@@ -2,7 +2,8 @@
 
 set -exo pipefail
 
-export CXXFLAGS="${CXXFLAGS} -fpermissive -std=c++17"
+export CFLAGS="${CFLAGS:-} -D_DEFAULT_SOURCE -D_BSD_SOURCE"
+export CXXFLAGS="${CXXFLAGS:-} -fpermissive -std=c++17 -D_DEFAULT_SOURCE -D_BSD_SOURCE"
 
 ./configure \
     --prefix=${PREFIX} \
