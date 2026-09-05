@@ -1,6 +1,6 @@
 context:
   name: lnav
-  version: "0.14.0"
+  version: "0.14.1"
 
 package:
   name: ${{ name }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/tstack/${{ name }}/releases/download/v${{ version }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 0fd591a2e0488a06b3b44d7b384d3d7c6852d68607efc16ef4dec7a6ed054eea
+  sha256: 870c896a6973e1e973007be1d66bba3aef23b2aa68411fb5cc85bb7dd21a7fb0
 
 build:
-  number: 1
+  number: 0
   skip:
     - win
 
