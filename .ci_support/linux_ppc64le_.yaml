@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/ppc64le
 bzip2:
 - '1'
 c_compiler:
@@ -23,7 +25,7 @@ libarchive:
 ncurses:
 - '6'
 pcre2:
-- '10.47'
+- '10.49'
 readline:
 - '8'
 rust_compiler:
