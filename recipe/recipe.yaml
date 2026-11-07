@@ -23,7 +23,7 @@ requirements:
     - ${{ stdlib("c") }}
     - cargo-bundle-licenses
     - make
-    - pkg-config
+    - pkgconf
     - sed
   host:
     - bzip2
